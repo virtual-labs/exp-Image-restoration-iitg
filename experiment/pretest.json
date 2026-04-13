@@ -2,37 +2,58 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Gaussian noise follows:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Uniform",
+        "b": "Normal",
+        "c": "Exponential",
+        "d": "Binary"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Best filter for Salt & Pepper noise:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Gaussian",
+        "b": "Mean",
+        "c": "Median",
+        "d": "Laplacian"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Bilateral filter preserves:",
+      "answers": {
+        "a": "Only noise",
+        "b": "Edges",
+        "c": "Histogram peaks",
+        "d": "Thresholds"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "NLM denoising works based on:",
+      "answers": {
+        "a": "Single pixel avg",
+        "b": "Similar patch avg",
+        "c": "Edge gradients",
+        "d": "Fourier coefficients"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Image restoration aims to:",
+      "answers": {
+        "a": "Compress images",
+        "b": "Recover degraded images",
+        "c": "Detect edges",
+        "d": "Segment objects"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

@@ -2,37 +2,58 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Increasing Gaussian filter kernel size causes:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "More smoothing",
+        "b": "Sharpening",
+        "c": "Edge amplification",
+        "d": "No effect"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "NLM is preferred when:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Texture preservation needed",
+        "b": "Only binary images",
+        "c": "No noise exists",
+        "d": "Histogram equalization"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Median filter output is based on:",
+      "answers": {
+        "a": "Mean",
+        "b": "Median",
+        "c": "Max",
+        "d": "Min"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Bilateral filtering considers:",
+      "answers": {
+        "a": "Spatial only",
+        "b": "Intensity only",
+        "c": "Both",
+        "d": "Neither"
       },
       "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Gaussian noise removal is best done by:",
+      "answers": {
+        "a": "Laplacian",
+        "b": "Gaussian/Bilateral filters",
+        "c": "Thresholding",
+        "d": "Erosion"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
