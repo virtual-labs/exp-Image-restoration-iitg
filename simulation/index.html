@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiment 3: Image Restoration</title>
+
+<link rel="stylesheet" href="css/main.css" />
+  <script src="https://docs.opencv.org/4.x/opencv.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+<div class="app">
+
+<header class="topbar">
+  <div>
+    <h1>Experiment 3: Image Restoration / Noise Filtering</h1>
+    <p>Gaussian & Salt-Pepper Noise with Denoising Filters</p>
+  </div>
+  <div class="top-controls">
+    <div class="status-pill">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Loading OpenCV...</span>
+    </div>
+    <button id="resetBtn">Reset</button>
+    <button id="downloadBtn">Download</button>
+    <button id="fullscreenBtn">Fullscreen</button>
+  </div>
+</header>
+
+<main class="layout">
+
+<aside class="sidebar">
+
+<div class="card">
+<h3>Input</h3>
+<input type="file" id="fileInput" accept="image/*">
+</div>
+
+<div class="card">
+<h3>Noise</h3>
+<select id="noiseType">
+  <option value="gaussian">Gaussian</option>
+  <option value="sp">Salt & Pepper</option>
+</select>
+<input type="range" id="noiseLevel" min="0" max="50" value="20">
+<button id="addNoiseBtn">Add Noise</button>
+</div>
+
+<div class="card">
+<h3>Filter</h3>
+<select id="filterType">
+  <option value="gaussian">Gaussian</option>
+  <option value="median">Median</option>
+  <option value="bilateral">Bilateral</option>
+  <option value="nlm">Non-Local Means (NLM)</option>
+</select>
+<button id="applyFilterBtn">Apply Filter</button>
+<p class="note">
+⚠ NLM depends on OpenCV.js photo module. Some browser builds may not fully support it.
+</p>
+</div>
+
+<div class="card">
+<h3>Metrics</h3>
+<p>PSNR: <span id="psnrVal">-</span></p>
+<p>SSIM: <span id="ssimVal">-</span></p>
+</div>
+
+</aside>
+
+<section class="workspace">
+
+<div class="canvas-row">
+<div class="canvas-card">
+<div class="canvas-head">Original</div>
+<canvas id="originalCanvas"></canvas>
+</div>
+
+<div class="canvas-card">
+<div class="canvas-head">Noisy</div>
+<canvas id="noisyCanvas"></canvas>
+</div>
+
+<div class="canvas-card">
+<div class="canvas-head">Restored <span class="live">Live</span></div>
+<canvas id="restoredCanvas"></canvas>
+</div>
+</div>
+
+</section>
+</main>
+</div>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
