@@ -1,94 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experiment 3: Image Restoration</title>
 
-<link rel="stylesheet" href="css/main.css" />
-  <script src="https://docs.opencv.org/4.x/opencv.js"></script>
-  <script src="js/main.js" defer></script>
+<meta charset="UTF-8">
+
+<title>Experiment 4: Inverse & Wiener Filtering</title>
+
+<link rel="stylesheet" href="css/main.css">
+
+<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+
+<script src="js/main.js" defer></script>
+
 </head>
 
 <body>
 <div class="app">
-
 <header class="topbar">
-  <div>
-    <h1>Experiment 3: Image Restoration / Noise Filtering</h1>
-    <p>Gaussian & Salt-Pepper Noise with Denoising Filters</p>
-  </div>
-  <div class="top-controls">
-    <div class="status-pill">
-      <span class="dot" id="statusDot"></span>
-      <span id="statusText">Loading OpenCV...</span>
-    </div>
-    <button id="resetBtn">Reset</button>
-    <button id="downloadBtn">Download</button>
-    <button id="fullscreenBtn">Fullscreen</button>
-  </div>
+<div>
+<h1>Experiment 4: Inverse & Wiener Filtering</h1>
+<p>Frequency Domain (Stable Demonstration Version)</p>
+</div>
+<div class="status-pill">
+<span class="dot" id="statusDot"></span>
+<span id="statusText">Loading OpenCV...</span>
+</div>
+<button onclick="location.reload()">Reset</button>
 </header>
 
 <main class="layout">
-
 <aside class="sidebar">
 
 <div class="card">
 <h3>Input</h3>
-<input type="file" id="fileInput" accept="image/*">
+<input type="file" id="fileInput">
 </div>
 
 <div class="card">
-<h3>Noise</h3>
-<select id="noiseType">
-  <option value="gaussian">Gaussian</option>
-  <option value="sp">Salt & Pepper</option>
+<h3>PSF Type</h3>
+<select id="psfType">
+<option value="motion">Motion Blur</option>
+<option value="gaussian">Gaussian Blur</option>
 </select>
-<input type="range" id="noiseLevel" min="0" max="50" value="20">
-<button id="addNoiseBtn">Add Noise</button>
+<input type="range" id="psfSize" min="3" max="31" value="15">
 </div>
 
 <div class="card">
-<h3>Filter</h3>
-<select id="filterType">
-  <option value="gaussian">Gaussian</option>
-  <option value="median">Median</option>
-  <option value="bilateral">Bilateral</option>
-  <option value="nlm">Non-Local Means (NLM)</option>
-</select>
-<button id="applyFilterBtn">Apply Filter</button>
-<p class="note">
-⚠ NLM depends on OpenCV.js photo module. Some browser builds may not fully support it.
-</p>
-</div>
-
-<div class="card">
-<h3>Metrics</h3>
-<p>PSNR: <span id="psnrVal">-</span></p>
-<p>SSIM: <span id="ssimVal">-</span></p>
+<h3>Wiener K</h3>
+<input type="range" id="wienerK" min="0.001" max="0.1" step="0.001" value="0.01">
+<button id="processBtn">Process</button>
 </div>
 
 </aside>
 
 <section class="workspace">
-
 <div class="canvas-row">
-<div class="canvas-card">
-<div class="canvas-head">Original</div>
-<canvas id="originalCanvas"></canvas>
+<div class="canvas-card"><h4>Original</h4><canvas id="original"></canvas></div>
+<div class="canvas-card"><h4>Blurred</h4><canvas id="blurred"></canvas></div>
+<div class="canvas-card"><h4>Inverse</h4><canvas id="inverse"></canvas></div>
+<div class="canvas-card"><h4>Wiener</h4><canvas id="wiener"></canvas></div>
 </div>
-
-<div class="canvas-card">
-<div class="canvas-head">Noisy</div>
-<canvas id="noisyCanvas"></canvas>
-</div>
-
-<div class="canvas-card">
-<div class="canvas-head">Restored <span class="live">Live</span></div>
-<canvas id="restoredCanvas"></canvas>
-</div>
-</div>
-
 </section>
 </main>
 </div>
