@@ -1,0 +1,60 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Increasing Gaussian filter kernel size causes:",
+      "answers": {
+        "a": "More smoothing",
+        "b": "Sharpening",
+        "c": "Edge amplification",
+        "d": "No effect"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "NLM is preferred when:",
+      "answers": {
+        "a": "Texture preservation needed",
+        "b": "Only binary images",
+        "c": "No noise exists",
+        "d": "Histogram equalization"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Median filter output is based on:",
+      "answers": {
+        "a": "Mean",
+        "b": "Median",
+        "c": "Max",
+        "d": "Min"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Bilateral filtering considers:",
+      "answers": {
+        "a": "Spatial only",
+        "b": "Intensity only",
+        "c": "Both",
+        "d": "Neither"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Gaussian noise removal is best done by:",
+      "answers": {
+        "a": "Laplacian",
+        "b": "Gaussian/Bilateral filters",
+        "c": "Thresholding",
+        "d": "Erosion"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

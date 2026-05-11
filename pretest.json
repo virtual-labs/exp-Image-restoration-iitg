@@ -1,0 +1,60 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Gaussian noise follows:",
+      "answers": {
+        "a": "Uniform",
+        "b": "Normal",
+        "c": "Exponential",
+        "d": "Binary"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Best filter for Salt & Pepper noise:",
+      "answers": {
+        "a": "Gaussian",
+        "b": "Mean",
+        "c": "Median",
+        "d": "Laplacian"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Bilateral filter preserves:",
+      "answers": {
+        "a": "Only noise",
+        "b": "Edges",
+        "c": "Histogram peaks",
+        "d": "Thresholds"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "NLM denoising works based on:",
+      "answers": {
+        "a": "Single pixel avg",
+        "b": "Similar patch avg",
+        "c": "Edge gradients",
+        "d": "Fourier coefficients"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Image restoration aims to:",
+      "answers": {
+        "a": "Compress images",
+        "b": "Recover degraded images",
+        "c": "Detect edges",
+        "d": "Segment objects"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
